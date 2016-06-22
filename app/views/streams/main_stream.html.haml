@@ -20,27 +20,27 @@
           .pull-right
             = link_to '&times;'.html_safe, getting_started_completed_path, :id => "gs-skip-x", :class => "close"
 
-.container-fluid
-  .row-fluid
-    .offset1.span2#leftNavBar
-      #home_user_badge
-        = owner_image_link
-        %h4
-          = link_to current_user.first_name, local_or_remote_person_path(current_user.person)
+/ .container-fluid
+/   .row-fluid
+/     .offset1.span2#leftNavBar
+/       #home_user_badge
+/         = owner_image_link
+/         %h4
+/           = link_to current_user.first_name, local_or_remote_person_path(current_user.person)
 
-      %ul#stream_selection
-        %li{data: {stream: "stream"}}
-          = link_to t("streams.multi.title"), stream_path, rel: "backbone", class: "hoverable"
-        %li{data: {stream: "activity"}}
-          = link_to t("streams.activity.title"), activity_stream_path, rel: "backbone", class: "hoverable"
-        %li{data: {stream: "mentions"}}
-          = link_to t("streams.mentions.title"), mentioned_stream_path, rel: "backbone", class: "hoverable"
-        %li.all_aspects
-          = render "aspects/aspect_listings", stream: @stream
-        %li
-          = render "tags/followed_tags_listings"
-        %li{data: {stream: "public"}}
-          = link_to t("streams.public.title"), public_stream_path, rel: "backbone", class: "hoverable"
+/       %ul#stream_selection
+/         %li{data: {stream: "stream"}}
+/           = link_to t("streams.multi.title"), stream_path, rel: "backbone", class: "hoverable"
+/         %li{data: {stream: "activity"}}
+/           = link_to t("streams.activity.title"), activity_stream_path, rel: "backbone", class: "hoverable"
+/         %li{data: {stream: "mentions"}}
+/           = link_to t("streams.mentions.title"), mentioned_stream_path, rel: "backbone", class: "hoverable"
+/         %li.all_aspects
+/           = render "aspects/aspect_listings", stream: @stream
+/         %li
+/           = render "tags/followed_tags_listings"
+/         %li{data: {stream: "public"}}
+/           = link_to t("streams.public.title"), public_stream_path, rel: "backbone", class: "hoverable"
 
     .span6
       #aspect_stream_container.stream_container
